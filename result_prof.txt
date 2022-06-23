@@ -1,0 +1,736 @@
+Statistical profiling result from log_v8.log, (1300 ticks, 8 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     23    1.8%          /usr/lib/system/libsystem_pthread.dylib
+     16    1.2%          /usr/lib/system/libsystem_c.dylib
+      5    0.4%          /usr/lib/libc++.1.dylib
+      4    0.3%          /usr/lib/system/libsystem_malloc.dylib
+      1    0.1%          /usr/lib/system/libsystem_kernel.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     13    1.0%    1.0%  LazyCompile: *resolve node:path:1091:10
+      4    0.3%    0.3%  LazyCompile: *normalizeString node:path:66:25
+      3    0.2%    0.2%  Function: ^processPromiseRejections node:internal/process/promises:220:34
+      2    0.2%    0.2%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:630:37
+      2    0.2%    0.2%  Function: ^module.exports /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/qs/lib/parse.js:239:27
+      2    0.2%    0.2%  Function: ^get node:internal/streams/readable:1191:18
+      1    0.1%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.1%    0.1%  RegExp: ^((?:@[^/\\%]+\/)?[^./\\%][^/\\%]*)(\/.*)?$
+      1    0.1%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff] {1}
+      1    0.1%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.1%    0.1%  RegExp: (?:^|\/)\.?\.$
+      1    0.1%    0.1%  LazyCompile: *realpathSync node:fs:2439:22
+      1    0.1%    0.1%  LazyCompile: *handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:136:31
+      1    0.1%    0.1%  LazyCompile: *formatWithOptionsInternal node:internal/util/inspect:2048:35
+      1    0.1%    0.1%  Function: ^trySelf node:internal/modules/cjs/loader:442:17
+      1    0.1%    0.1%  Function: ^toString /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/levels.js:18:11
+      1    0.1%    0.1%  Function: ^set /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/application.js:359:23
+      1    0.1%    0.1%  Function: ^readPackageScope node:internal/modules/cjs/loader:322:26
+      1    0.1%    0.1%  Function: ^parserOnIncoming node:_http_server:866:26
+      1    0.1%    0.1%  Function: ^nextTick node:internal/process/task_queues:103:18
+      1    0.1%    0.1%  Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    0.1%    0.1%  Function: ^log node:internal/console/constructor:359:6
+      1    0.1%    0.1%  Function: ^isEncoding node:buffer:532:40
+      1    0.1%    0.1%  Function: ^hasHooks node:internal/async_hooks:469:18
+      1    0.1%    0.1%  Function: ^getProtohost /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:546:22
+      1    0.1%    0.1%  Function: ^get node:net:1761:6
+      1    0.1%    0.1%  Function: ^get node:internal/streams/writable:835:8
+      1    0.1%    0.1%  Function: ^generateETag /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/utils.js:273:32
+      1    0.1%    0.1%  Function: ^finalhandler /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/finalhandler/index.js:77:23
+      1    0.1%    0.1%  Function: ^fastparse /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/parseurl/index.js:95:20
+      1    0.1%    0.1%  Function: ^entitytag /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/etag/index.js:39:20
+      1    0.1%    0.1%  Function: ^destroyHooksExist node:internal/async_hooks:485:27
+      1    0.1%    0.1%  Function: ^configForCategory /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/categories.js:174:27
+      1    0.1%    0.1%  Function: ^checkInvalidHeaderChar node:_http_common:221:32
+      1    0.1%    0.1%  Function: ^_write node:internal/streams/writable:284:16
+      1    0.1%    0.1%  Function: ^_addListener node:events:555:22
+      1    0.1%    0.1%  Function: ^_addHeaderLine node:_http_incoming:340:24
+      1    0.1%    0.1%  Function: ^Socket._writeGeneric node:net:797:42
+      1    0.1%    0.1%  Function: ^Socket node:net:291:16
+      1    0.1%    0.1%  Function: ^<anonymous> node:internal/validators:100:40
+      1    0.1%    0.1%  Function: ^<anonymous> node:_http_outgoing:564:45
+
+ [C++]:
+   ticks  total  nonlib   name
+    687   52.8%   54.9%  T _napi_create_dataview
+    264   20.3%   21.1%  T _posix_spawnattr_setflags
+     24    1.8%    1.9%  t _Builtins_LoadIC
+     24    1.8%    1.9%  T _mach_port_insert_member
+     19    1.5%    1.5%  T _sigprocmask
+     19    1.5%    1.5%  T __kernelrpc_mach_port_move_member_trap
+      8    0.6%    0.6%  t _Builtins_StoreIC
+      6    0.5%    0.5%  t _Builtins_StringSubstring
+      6    0.5%    0.5%  t _Builtins_StrictEqual_Baseline
+      6    0.5%    0.5%  t _Builtins_CallFunction_ReceiverIsNullOrUndefined
+      5    0.4%    0.4%  t _Builtins_StringEqual
+      5    0.4%    0.4%  t _Builtins_KeyedLoadIC
+      4    0.3%    0.3%  t _Builtins_LoadIC_NoFeedback
+      4    0.3%    0.3%  t _Builtins_CallFunction_ReceiverIsNotNullOrUndefined
+      4    0.3%    0.3%  T _mach_port_insert_right
+      3    0.2%    0.2%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      3    0.2%    0.2%  t _Builtins_ToBooleanForBaselineJump
+      3    0.2%    0.2%  t _Builtins_LoadIC_Megamorphic
+      3    0.2%    0.2%  t _Builtins_KeyedLoadIC_Megamorphic
+      3    0.2%    0.2%  t _Builtins_GetProperty
+      3    0.2%    0.2%  t _Builtins_FunctionPrototypeCall
+      3    0.2%    0.2%  t _Builtins_Call_ReceiverIsNullOrUndefined_Baseline_Compact
+      3    0.2%    0.2%  T _task_get_exception_ports
+      3    0.2%    0.2%  T _mach_timebase_info_trap
+      3    0.2%    0.2%  T ___libplatform_init
+      2    0.2%    0.2%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      2    0.2%    0.2%  t node::Environment::AddCleanupHook(void (*)(void*), void*)
+      2    0.2%    0.2%  t __os_nospin_lock_lock_slow
+      2    0.2%    0.2%  t _Builtins_StoreICBaseline
+      2    0.2%    0.2%  t _Builtins_RecordWriteEmitRememberedSetSaveFP
+      2    0.2%    0.2%  t _Builtins_KeyedStoreIC_Megamorphic
+      2    0.2%    0.2%  t _Builtins_KeyedLoadICBaseline
+      2    0.2%    0.2%  t _Builtins_BaselineOutOfLinePrologue
+      2    0.2%    0.2%  t _Builtins_BaselineLeaveFrame
+      2    0.2%    0.2%  t _Builtins_Add_Baseline
+      2    0.2%    0.2%  T _mach_msg_overwrite_trap
+      1    0.1%    0.1%  t std::__1::vector<v8::Local<v8::Object>, std::__1::allocator<v8::Local<v8::Object> > >::resize(unsigned long)
+      1    0.1%    0.1%  t std::__1::__hash_table<unsigned long, std::__1::hash<unsigned long>, std::__1::equal_to<unsigned long>, std::__1::allocator<unsigned long> >::erase(std::__1::__hash_const_iterator<std::__1::__hash_node<unsigned long, void*>*>)
+      1    0.1%    0.1%  t node::Environment::StartProfilerIdleNotifier()::$_5::__invoke(uv_check_s*)
+      1    0.1%    0.1%  t __os_once_gate_wait
+      1    0.1%    0.1%  t _Builtins_SubString
+      1    0.1%    0.1%  t _Builtins_StringToLowerCaseIntl
+      1    0.1%    0.1%  t _Builtins_StringPrototypeSubstring
+      1    0.1%    0.1%  t _Builtins_StringPrototypeStartsWith
+      1    0.1%    0.1%  t _Builtins_StringPrototypeMatch
+      1    0.1%    0.1%  t _Builtins_StringPrototypeEndsWith
+      1    0.1%    0.1%  t _Builtins_StringAdd_CheckNone
+      1    0.1%    0.1%  t _Builtins_StoreFastElementIC_Standard
+      1    0.1%    0.1%  t _Builtins_RegExpReplace
+      1    0.1%    0.1%  t _Builtins_RegExpPrototypeTest
+      1    0.1%    0.1%  t _Builtins_ReflectApply
+      1    0.1%    0.1%  t _Builtins_PerformPromiseThen
+      1    0.1%    0.1%  t _Builtins_NumberPrototypeToString
+      1    0.1%    0.1%  t _Builtins_LoadICBaseline
+      1    0.1%    0.1%  t _Builtins_LoadGlobalICBaseline
+      1    0.1%    0.1%  t _Builtins_LoadGlobalIC
+      1    0.1%    0.1%  t _Builtins_LessThan_Baseline
+      1    0.1%    0.1%  t _Builtins_LdaSmiHandler
+      1    0.1%    0.1%  t _Builtins_KeyedStoreICBaseline
+      1    0.1%    0.1%  t _Builtins_KeyedStoreIC
+      1    0.1%    0.1%  t _Builtins_KeyedLoadICTrampoline_Megamorphic
+      1    0.1%    0.1%  t _Builtins_JumpIfNullHandler
+      1    0.1%    0.1%  t _Builtins_InterpreterEntryTrampoline
+      1    0.1%    0.1%  t _Builtins_GreaterThanOrEqual_Baseline
+      1    0.1%    0.1%  t _Builtins_FunctionPrototypeHasInstance
+      1    0.1%    0.1%  t _Builtins_FindOrderedHashMapEntry
+      1    0.1%    0.1%  t _Builtins_FastNewClosure
+      1    0.1%    0.1%  t _Builtins_CreateEmptyArrayLiteral
+      1    0.1%    0.1%  t _Builtins_Construct_Baseline
+      1    0.1%    0.1%  t _Builtins_ConstructFunction
+      1    0.1%    0.1%  t _Builtins_CompileLazy
+      1    0.1%    0.1%  t _Builtins_Call_ReceiverIsAny
+      1    0.1%    0.1%  t _Builtins_CallFunction_ReceiverIsAny
+      1    0.1%    0.1%  t _Builtins_CallBoundFunction
+      1    0.1%    0.1%  t _Builtins_ArrayPrototypePop
+      1    0.1%    0.1%  t _Builtins_ArrayConstructorImpl
+      1    0.1%    0.1%  T node::AsyncWrap::EmitTraceEventAfter(node::AsyncWrap::ProviderType, double)
+      1    0.1%    0.1%  T _uv_buf_init
+      1    0.1%    0.1%  T _task_restartable_ranges_register
+      1    0.1%    0.1%  T _chmod
+      1    0.1%    0.1%  T ___bsdthread_terminate
+
+ [Summary]:
+   ticks  total  nonlib   name
+     61    4.7%    4.9%  JavaScript
+   1182   90.9%   94.5%  C++
+     64    4.9%    5.1%  GC
+     49    3.8%          Shared libraries
+      8    0.6%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    630   75.8%   48.5%  T _napi_create_dataview
+     23    2.8%    1.8%  t _Builtins_LoadIC
+     18    2.2%    1.4%  T __kernelrpc_mach_port_move_member_trap
+     17    2.0%    1.3%  T _sigprocmask
+      8    1.0%    0.6%  t _Builtins_StoreIC
+      6    0.7%    0.5%  t _Builtins_StringSubstring
+      6    0.7%    0.5%  t _Builtins_StrictEqual_Baseline
+      6    0.7%    0.5%  t _Builtins_FindOrderedHashMapEntry
+      5    0.6%    0.4%  t _Builtins_KeyedLoadIC_Megamorphic
+      5    0.6%    0.4%  t _Builtins_KeyedLoadIC
+      5    0.6%    0.4%  t _Builtins_CallFunction_ReceiverIsNullOrUndefined
+      4    0.5%    0.3%  t _Builtins_StringEqual
+      4    0.5%    0.3%  t _Builtins_LoadIC_NoFeedback
+      4    0.5%    0.3%  t _Builtins_CallFunction_ReceiverIsNotNullOrUndefined
+      3    0.4%    0.2%  t std::__1::basic_ostream<char, std::__1::char_traits<char> >& std::__1::__put_character_sequence<char, std::__1::char_traits<char> >(std::__1::basic_ostream<char, std::__1::char_traits<char> >&, char const*, unsigned long)
+      3    0.4%    0.2%  t _Builtins_ToBooleanForBaselineJump
+      3    0.4%    0.2%  t _Builtins_LoadIC_Megamorphic
+      3    0.4%    0.2%  t _Builtins_GetProperty
+      3    0.4%    0.2%  t _Builtins_FunctionPrototypeCall
+      3    0.4%    0.2%  t _Builtins_Call_ReceiverIsNullOrUndefined_Baseline_Compact
+      3    0.4%    0.2%  T _task_get_exception_ports
+      3    0.4%    0.2%  T ___libplatform_init
+      2    0.2%    0.2%  t std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > std::__1::__pad_and_output<char, std::__1::char_traits<char> >(std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> >, char const*, char const*, char const*, std::__1::ios_base&, char)
+      2    0.2%    0.2%  t node::Environment::AddCleanupHook(void (*)(void*), void*)
+      2    0.2%    0.2%  t __os_nospin_lock_lock_slow
+      2    0.2%    0.2%  t _Builtins_StringPrototypeEndsWith
+      2    0.2%    0.2%  t _Builtins_StoreICBaseline
+      2    0.2%    0.2%  t _Builtins_ReflectGet
+      2    0.2%    0.2%  t _Builtins_RecordWriteEmitRememberedSetSaveFP
+      2    0.2%    0.2%  t _Builtins_MapPrototypeGet
+      2    0.2%    0.2%  t _Builtins_KeyedStoreIC_Megamorphic
+      2    0.2%    0.2%  t _Builtins_KeyedLoadICBaseline
+      2    0.2%    0.2%  t _Builtins_CallApiCallback
+      2    0.2%    0.2%  t _Builtins_BaselineOutOfLinePrologue
+      2    0.2%    0.2%  t _Builtins_BaselineLeaveFrame
+      2    0.2%    0.2%  t _Builtins_ArrayForEach
+      2    0.2%    0.2%  T _mach_msg_overwrite_trap
+      1    0.1%    0.1%  t _Builtins_WeakMapPrototypeSet
+      1    0.1%    0.1%  t _Builtins_StringToLowerCaseIntl
+      1    0.1%    0.1%  t _Builtins_StringPrototypeSubstring
+      1    0.1%    0.1%  t _Builtins_StringPrototypeStartsWith
+      1    0.1%    0.1%  t _Builtins_StringPrototypeReplace
+      1    0.1%    0.1%  t _Builtins_StringPrototypeMatch
+      1    0.1%    0.1%  t _Builtins_StringAdd_CheckNone
+      1    0.1%    0.1%  t _Builtins_StoreFastElementIC_Standard
+      1    0.1%    0.1%  t _Builtins_RegExpReplace
+      1    0.1%    0.1%  t _Builtins_RegExpPrototypeTest
+      1    0.1%    0.1%  t _Builtins_ReflectApply
+      1    0.1%    0.1%  t _Builtins_PerformPromiseThen
+      1    0.1%    0.1%  t _Builtins_NumberPrototypeToString
+      1    0.1%    0.1%  t _Builtins_LoadICBaseline
+      1    0.1%    0.1%  t _Builtins_LoadGlobalICBaseline
+      1    0.1%    0.1%  t _Builtins_LoadGlobalIC
+      1    0.1%    0.1%  t _Builtins_LessThan_Baseline
+      1    0.1%    0.1%  t _Builtins_LdaSmiHandler
+      1    0.1%    0.1%  t _Builtins_KeyedStoreICBaseline
+      1    0.1%    0.1%  t _Builtins_KeyedStoreIC
+      1    0.1%    0.1%  t _Builtins_KeyedLoadICTrampoline_Megamorphic
+      1    0.1%    0.1%  t _Builtins_JumpIfNullHandler
+      1    0.1%    0.1%  t _Builtins_InterpreterEntryTrampoline
+      1    0.1%    0.1%  t _Builtins_GreaterThanOrEqual_Baseline
+      1    0.1%    0.1%  t _Builtins_FunctionPrototypeHasInstance
+      1    0.1%    0.1%  t _Builtins_FastNewClosure
+      1    0.1%    0.1%  t _Builtins_CreateEmptyArrayLiteral
+      1    0.1%    0.1%  t _Builtins_Construct_Baseline
+      1    0.1%    0.1%  t _Builtins_ConstructFunction
+      1    0.1%    0.1%  t _Builtins_CompileLazy
+      1    0.1%    0.1%  t _Builtins_Call_ReceiverIsAny
+      1    0.1%    0.1%  t _Builtins_CallFunction_ReceiverIsAny
+      1    0.1%    0.1%  t _Builtins_CallBoundFunction
+      1    0.1%    0.1%  t _Builtins_ArrayPrototypePop
+      1    0.1%    0.1%  t _Builtins_ArrayConstructorImpl
+      1    0.1%    0.1%  T _mach_port_insert_member
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+    687   52.8%  T _napi_create_dataview
+    223   32.5%    Function: ^compileFunction node:vm:308:25
+    178   79.8%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    178  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+    168   94.4%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+    133   79.2%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     35   20.8%            LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+     10    5.6%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     10  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     42   18.8%      LazyCompile: *Module._compile node:internal/modules/cjs/loader:1059:37
+     42  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     42  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     42  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      3    1.3%      LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1017:18
+      3  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      3  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      2   66.7%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1   33.3%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+    156   22.7%    Function: ^readSync node:fs:689:18
+    122   78.2%      Function: ^tryReadSync node:fs:434:21
+    122  100.0%        Function: ^readFileSync node:fs:455:22
+    118   96.7%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     76   64.4%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     42   35.6%            LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      4    3.3%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      4  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     34   21.8%      LazyCompile: *readFileSync node:fs:455:22
+     34  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     18   52.9%          LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+     18  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+     16   47.1%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+     16  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:759:24
+     20    2.9%    Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+     15   75.0%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      3   20.0%        Function: ~<anonymous> node:http:1:1
+      3  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      3  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:262:25
+      2   13.3%        Function: ~<anonymous> node:internal/cluster/primary:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      2   13.3%        Function: ~<anonymous> node:internal/child_process:1:1
+      2  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    6.7%        LazyCompile: ~lazyWebCrypto node:crypto:125:23
+      1  100.0%          LazyCompile: ~get node:crypto:358:8
+      1  100.0%            t _Builtins_ReflectGet
+      1    6.7%        LazyCompile: ~lazyLoadStreams node:fs:2872:25
+      1  100.0%          LazyCompile: ~get ReadStream node:fs:3015:17
+      1  100.0%            t _Builtins_ReflectGet
+      1    6.7%        Function: ~<anonymous> node:tty:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:262:25
+      1    6.7%        Function: ~<anonymous> node:cluster:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            Function: ^compileForPublicLoader node:internal/bootstrap/loaders:262:25
+      1    6.7%        Function: ~<anonymous> node:child_process:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    6.7%        Function: ~<anonymous> node:_http_outgoing:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    6.7%        Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    6.7%        Function: ~<anonymous> node:_http_client:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      5   25.0%      Function: ^compileForPublicLoader node:internal/bootstrap/loaders:262:25
+      5  100.0%        Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      5  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      5  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+     14    2.0%    LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+     13   92.9%      Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      3   23.1%        Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      3  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      3  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      2   15.4%        LazyCompile: ~initializeCJSLoader node:internal/bootstrap/pre_execution:514:29
+      2  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:30:36
+      2  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      2   15.4%        Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      2   15.4%        Function: ~<anonymous> node:internal/modules/esm/fetch_module:1:1
+      2  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      2  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    7.7%        LazyCompile: ~initializeSourceMapsHandlers node:internal/bootstrap/pre_execution:553:38
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:30:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    7.7%        Function: ~<anonymous> node:net:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    7.7%        Function: ~<anonymous> node:internal/modules/esm/module_map:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    7.7%        Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:315:27
+      1  100.0%            Function: ^nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1    7.1%      LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:348:29
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+     14    2.0%    LazyCompile: *compileFunction node:vm:308:25
+     14  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     14  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+     14  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+     14  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+     13    1.9%    Function: ^openSync node:fs:581:18
+     13  100.0%      Function: ^readFileSync node:fs:455:22
+     12   92.3%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      8   66.7%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      8  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      4   33.3%          LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      4  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    7.7%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:759:24
+     11    1.6%    Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     11  100.0%      Function: ^Socket._writeGeneric node:net:797:42
+     11  100.0%        Function: ^Socket._writev node:net:829:36
+     11  100.0%          Function: ^doWrite node:internal/streams/writable:399:17
+     11  100.0%            Function: ^clearBuffer node:internal/streams/writable:530:21
+      8    1.2%    Function: ^writeHead node:_http_server:269:19
+      8  100.0%      Function: ^_implicitHeader node:_http_server:264:68
+      8  100.0%        Function: ^write_ node:_http_outgoing:730:16
+      8  100.0%          Function: ^end node:_http_outgoing:833:45
+      8  100.0%            Function: ^send /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/response.js:111:25
+      7    1.0%    Function: ^stat node:internal/modules/cjs/loader:151:14
+      6   85.7%      Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      6  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      6  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      6  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1   14.3%      Function: ^tryFile node:internal/modules/cjs/loader:385:17
+      1  100.0%        Function: ^tryExtensions node:internal/modules/cjs/loader:401:23
+      1  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      7    1.0%    Function: ^read node:internal/modules/package_json_reader:16:14
+      7  100.0%      Function: ^readPackage node:internal/modules/cjs/loader:291:21
+      7  100.0%        Function: ^resolveExports node:internal/modules/cjs/loader:473:24
+      7  100.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      7  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      7    1.0%    Function: ^expressInit /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/middleware/init.js:29:30
+      4   57.1%      LazyCompile: *trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      4  100.0%        LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      4  100.0%          Function: ^query /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/middleware/query.js:39:24
+      4  100.0%            LazyCompile: *trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      3   42.9%      Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%        Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      2   66.7%          LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      2  100.0%            Function: ^query /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/middleware/query.js:39:24
+      1   33.3%          Function: ^<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:280:64
+      1  100.0%            Function: ^process_params /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:338:47
+
+    264   20.3%  T _posix_spawnattr_setflags
+
+     24    1.8%  t _Builtins_LoadIC
+      2    8.3%    Function: ^updateOutgoingData node:_http_server:609:28
+      2  100.0%      Function: ^_flushOutput node:_http_outgoing:951:63
+      2  100.0%        Function: ^_writeRaw node:_http_outgoing:344:19
+      2  100.0%          Function: ^_send node:_http_outgoing:319:49
+      2  100.0%            Function: ^write_ node:_http_outgoing:730:16
+      2    8.3%    Function: ^send /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/send/index.js:83:15
+      2  100.0%      Function: ^serveStatic /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/serve-static/index.js:72:31
+      1   50.0%        LazyCompile: *trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            Function: ^jsonParser /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/body-parser/lib/types/json.js:98:30
+      1   50.0%        Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            Function: ^<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:280:64
+      2    8.3%    Function: ^contentType /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/response.js:619:32
+      2  100.0%      Function: ^send /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/response.js:111:25
+      2  100.0%        Function: ^<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/routes/infoRouter.js:6:17
+      2  100.0%          Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            Function: ^next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/route.js:116:16
+      1    4.2%    t _Builtins_CallApiCallback
+      1  100.0%      LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    4.2%    LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1  100.0%      Function: ^expressInit /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/middleware/init.js:29:30
+      1  100.0%        Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1    4.2%    LazyCompile: *emit node:events:475:44
+      1  100.0%      Function: ^endReadableNT node:internal/streams/readable:1337:23
+      1  100.0%        LazyCompile: *processTicksAndRejections node:internal/process/task_queues:67:35
+      1    4.2%    Function: ^urlencodedParser /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      1  100.0%      Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            Function: ^expressInit /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/middleware/init.js:29:30
+      1    4.2%    Function: ^tryFile node:internal/modules/cjs/loader:385:17
+      1  100.0%      Function: ^tryExtensions node:internal/modules/cjs/loader:401:23
+      1  100.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      1    4.2%    Function: ^serveStatic /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/serve-static/index.js:72:31
+      1  100.0%      Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            Function: ^jsonParser /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/body-parser/lib/types/json.js:98:30
+      1    4.2%    Function: ^sendLogEventToAppender /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/log4js.js:36:32
+      1  100.0%      Function: ^<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/clustering.js:24:21
+      1  100.0%        t _Builtins_ArrayForEach
+      1  100.0%          Function: ^sendToListeners /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/clustering.js:23:25
+      1  100.0%            Function: ^send /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/clustering.js:88:9
+      1    4.2%    Function: ^query /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/middleware/query.js:39:24
+      1  100.0%      Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:136:31
+      1    4.2%    Function: ^pipe /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/send/index.js:506:43
+      1  100.0%      Function: ^serveStatic /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/serve-static/index.js:72:31
+      1  100.0%        Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            Function: ^<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:280:64
+      1    4.2%    Function: ^hasbody /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/type-is/index.js:92:18
+      1  100.0%      Function: ^jsonParser /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/body-parser/lib/types/json.js:98:30
+      1  100.0%        Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1    4.2%    Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/application.js:165:29
+      1  100.0%      Function: ^app /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/express.js:38:21
+      1  100.0%        Function: ^emit node:events:475:44
+      1  100.0%          Function: ^parserOnIncoming node:_http_server:866:26
+      1  100.0%            Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    4.2%    Function: ^getPathname /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:537:21
+      1  100.0%      Function: ^next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1  100.0%        Function: ^query /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/middleware/query.js:39:24
+      1  100.0%          Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1    4.2%    Function: ^getHighWaterMark node:internal/streams/state:19:26
+      1  100.0%      Function: ^ReadableState node:internal/streams/readable:83:23
+      1  100.0%        Function: ^Readable node:internal/streams/readable:186:18
+      1  100.0%          Function: ^IncomingMessage node:_http_incoming:51:25
+      1  100.0%            Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    4.2%    Function: ^app /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/express.js:38:21
+      1  100.0%      Function: ^emit node:events:475:44
+      1  100.0%        Function: ^parserOnIncoming node:_http_server:866:26
+      1  100.0%          Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    4.2%    Function: ^afterWrite node:internal/streams/writable:488:20
+      1  100.0%      Function: ^afterWriteTick node:internal/streams/writable:483:24
+      1  100.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:67:35
+      1    4.2%    Function: ^_flush node:_http_outgoing:934:51
+      1  100.0%      Function: ^assignSocket node:_http_server:239:62
+      1  100.0%        Function: ^parserOnIncoming node:_http_server:866:26
+      1  100.0%          Function: ^parserOnHeadersComplete node:_http_common:72:33
+      1    4.2%    Function: ^Writable.write node:internal/streams/writable:334:36
+      1  100.0%      Function: ^_writeRaw node:_http_outgoing:344:19
+      1  100.0%        Function: ^_send node:_http_outgoing:319:49
+      1  100.0%          Function: ^end node:_http_outgoing:833:45
+      1  100.0%            Function: ^send /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/response.js:111:25
+      1    4.2%    Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%      LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/faker/lib/locales/ne/name/index.js:1:1
+
+     24    1.8%  T _mach_port_insert_member
+      1    4.2%    LazyCompile: ~listOnTimeout node:internal/timers:512:25
+      1  100.0%      Function: ^processTimers node:internal/timers:492:25
+
+     23    1.8%  /usr/lib/system/libsystem_pthread.dylib
+      5   21.7%    LazyCompile: *compileFunction node:vm:308:25
+      5  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      5  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      5  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      5  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      2    8.7%    LazyCompile: ~realpathSync node:fs:2439:22
+      2  100.0%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:394:20
+      2  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:495:28
+      2  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1    4.3%    T _napi_create_dataview
+      1  100.0%      LazyCompile: ~getStack /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/depd/index.js:381:19
+      1  100.0%        LazyCompile: ~depd /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/depd/index.js:103:15
+      1  100.0%          Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/body-parser/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    4.3%    LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:165:29
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:30:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.3%    LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:30:36
+      1  100.0%      Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.3%    LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:102:28
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:30:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    4.3%    LazyCompile: ~parserOnHeadersComplete node:_http_common:72:33
+      1    4.3%    LazyCompile: ~openSync node:fs:581:18
+      1  100.0%      LazyCompile: ~readFileSync node:fs:455:22
+      1  100.0%        LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%          LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:759:24
+      1    4.3%    LazyCompile: ~formatValue node:internal/util/inspect:745:21
+      1  100.0%      LazyCompile: ~inspect node:internal/util/inspect:292:17
+      1  100.0%        LazyCompile: ~createAppender /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/index.js:62:24
+      1  100.0%          LazyCompile: ~getAppender /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/index.js:48:21
+      1  100.0%            LazyCompile: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/index.js:112:41
+      1    4.3%    LazyCompile: ~Socket node:net:291:16
+      1  100.0%      LazyCompile: ~WriteStream node:tty:84:21
+      1  100.0%        LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%          LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:156:19
+      1  100.0%            Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/debug/src/node.js:1:1
+      1    4.3%    Function: ^onconnection node:net:1595:22
+
+     19    1.5%  T _sigprocmask
+      8   42.1%    LazyCompile: *compileFunction node:vm:308:25
+      8  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      8  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      8  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      8  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      1    5.3%    t _Builtins_StringPrototypeReplace
+      1  100.0%      LazyCompile: ~Mime.lookup /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/mime/mime.js:69:33
+      1  100.0%        LazyCompile: ~contentType /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/response.js:619:32
+      1  100.0%          LazyCompile: ~send /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/response.js:111:25
+      1  100.0%            LazyCompile: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/routes/infoRouter.js:6:17
+      1    5.3%    LazyCompile: ~unrefActive node:internal/timers:322:21
+      1  100.0%      LazyCompile: ~refresh node:internal/timers:207:10
+      1  100.0%        LazyCompile: ~_unrefTimer node:net:437:52
+      1  100.0%          LazyCompile: ~onStreamRead node:internal/stream_base_commons:167:22
+      1    5.3%    LazyCompile: ~timestampLevelAndCategory /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/layouts.js:42:35
+      1  100.0%      LazyCompile: ~basicLayout /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/layouts.js:63:21
+      1  100.0%        LazyCompile: ~app /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/file.js:70:24
+      1  100.0%          LazyCompile: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/log4js.js:42:29
+      1  100.0%            t _Builtins_ArrayForEach
+      1    5.3%    LazyCompile: ~readFileSync node:fs:455:22
+      1  100.0%      LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%        LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          LazyCompile: ~Module._load node:internal/modules/cjs/loader:759:24
+      1  100.0%            LazyCompile: ~Module.require node:internal/modules/cjs/loader:997:36
+      1    5.3%    LazyCompile: ~raw /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/knex/lib/client.js:135:6
+      1  100.0%      LazyCompile: ~Client /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/knex/lib/client.js:40:14
+      1  100.0%        LazyCompile: ~Client_MySQL /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/knex/lib/dialects/mysql/index.js:21:1
+      1  100.0%          LazyCompile: ~knex /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/knex/lib/knex-builder/Knex.js:9:14
+      1  100.0%            LazyCompile: ~Product /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/models/product.model.js:7:14
+      1    5.3%    LazyCompile: ~get node:_http_incoming:108:16
+      1  100.0%      LazyCompile: ~parserOnIncoming node:_http_server:866:26
+      1  100.0%        LazyCompile: ~parserOnHeadersComplete node:_http_common:72:33
+      1    5.3%    LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%      LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:156:19
+      1  100.0%        Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    5.3%    LazyCompile: ~addListener node:events:618:58
+      1  100.0%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:165:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:30:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.3%    LazyCompile: ~<anonymous> node:internal/validators:83:3
+      1  100.0%      Function: ^<anonymous> node:internal/fs/utils:687:40
+      1  100.0%        LazyCompile: ~closeSync node:fs:531:19
+      1  100.0%          LazyCompile: ~readFileSync node:fs:455:22
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+
+     19    1.5%  T __kernelrpc_mach_port_move_member_trap
+      5   26.3%    LazyCompile: *compileFunction node:vm:308:25
+      5  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      5  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      5  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      5  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      2   10.5%    LazyCompile: ~toRealPath node:internal/modules/cjs/loader:394:20
+      2  100.0%      LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:495:28
+      2  100.0%        LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      2  100.0%          LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      2  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.3%    t _Builtins_ArrayForEach
+      1  100.0%      LazyCompile: ~setup /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/index.js:101:15
+      1  100.0%        LazyCompile: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/configuration.js:46:21
+      1  100.0%          t _Builtins_ArrayForEach
+      1  100.0%            LazyCompile: ~configure /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/configuration.js:37:19
+      1    5.3%    T _napi_create_dataview
+      1  100.0%      LazyCompile: ~getStack /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/depd/index.js:381:19
+      1  100.0%        LazyCompile: ~depd /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/depd/index.js:103:15
+      1  100.0%          Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/body-parser/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    5.3%    LazyCompile: ~urlencodedParser /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      1  100.0%      Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          Function: ^<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:280:64
+      1  100.0%            Function: ^process_params /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:338:47
+      1    5.3%    LazyCompile: ~patch /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/graceful-fs/graceful-fs.js:102:16
+      1  100.0%      Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/graceful-fs/graceful-fs.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    5.3%    LazyCompile: ~insert node:internal/timers:355:16
+      1  100.0%      LazyCompile: ~setInterval node:timers:209:21
+      1  100.0%        LazyCompile: ~setupConnectionsTracking node:_http_server:409:34
+      1  100.0%          LazyCompile: ~Server node:_http_server:418:16
+      1  100.0%            LazyCompile: ~createServer node:http:58:22
+      1    5.3%    LazyCompile: ~fastparse /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/parseurl/index.js:95:20
+      1  100.0%      LazyCompile: ~parseurl /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/parseurl/index.js:35:19
+      1  100.0%        LazyCompile: ~getPathname /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:537:21
+      1  100.0%          LazyCompile: ~next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            LazyCompile: ~handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:136:31
+      1    5.3%    LazyCompile: ~afterWriteTick node:internal/streams/writable:483:24
+      1  100.0%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    5.3%    LazyCompile: ~Server node:_http_server:418:16
+      1  100.0%      LazyCompile: ~createServer node:http:58:22
+      1  100.0%        LazyCompile: ~listen /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/application.js:633:29
+      1  100.0%          Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1    5.3%    LazyCompile: ~<anonymous> node:path:1082:10
+      1  100.0%      LazyCompile: ~resolve node:path:1091:10
+      1  100.0%        LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:102:28
+      1  100.0%          LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:30:36
+      1  100.0%            Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    5.3%    LazyCompile: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/knex/lib/schema/builder.js:76:20
+      1  100.0%      t _Builtins_ArrayForEach
+      1  100.0%        Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/knex/lib/schema/builder.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    5.3%    Function: ^<anonymous> node:internal/validators:230:42
+      1  100.0%      Function: ^compileFunction node:vm:308:25
+      1  100.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+
+     16    1.2%  /usr/lib/system/libsystem_c.dylib
+      4   25.0%    LazyCompile: *compileFunction node:vm:308:25
+      4  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      4  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      4  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      4  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      2   12.5%    t _Builtins_ReflectGet
+      2  100.0%      Function: ^getOwn node:internal/bootstrap/loaders:186:16
+      2  100.0%        Function: ^syncExports node:internal/bootstrap/loaders:303:14
+      1   50.0%          LazyCompile: ~<anonymous> node:internal/bootstrap/loaders:289:15
+      1  100.0%            T _napi_create_dataview
+      1   50.0%          Function: ^<anonymous> node:internal/bootstrap/loaders:289:15
+      1  100.0%            T _napi_create_dataview
+      1    6.3%    LazyCompile: ~setupFetch node:internal/bootstrap/pre_execution:176:20
+      1  100.0%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:30:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    6.3%    LazyCompile: ~resOnFinish node:_http_server:808:21
+      1  100.0%      LazyCompile: ~emit node:events:475:44
+      1  100.0%        LazyCompile: ~onFinish node:_http_outgoing:828:18
+      1  100.0%          LazyCompile: ~callback node:internal/streams/writable:551:44
+      1  100.0%            LazyCompile: ~afterWrite node:internal/streams/writable:488:20
+      1    6.3%    LazyCompile: ~pipe /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/send/index.js:506:43
+      1  100.0%      LazyCompile: ~serveStatic /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/serve-static/index.js:72:31
+      1  100.0%        LazyCompile: ~handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%          LazyCompile: ~trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:280:64
+      1    6.3%    LazyCompile: ~emit node:events:475:44
+      1  100.0%      LazyCompile: ~emitListeningNT node:net:1411:25
+      1  100.0%        LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:67:35
+      1    6.3%    LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%      LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:156:19
+      1  100.0%        Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1059:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1    6.3%    LazyCompile: ~createAppender /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/index.js:62:24
+      1  100.0%      LazyCompile: ~getAppender /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/index.js:48:21
+      1  100.0%        LazyCompile: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/index.js:112:41
+      1  100.0%          t _Builtins_ArrayForEach
+      1  100.0%            LazyCompile: ~setup /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/log4js/lib/appenders/index.js:101:15
+      1    6.3%    LazyCompile: ~baseSetToString /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/lodash/_baseSetToString.js:13:60
+      1  100.0%      LazyCompile: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/lodash/_shortOut.js:21:18
+      1  100.0%        LazyCompile: ~baseRest /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/lodash/_baseRest.js:13:18
+      1  100.0%          Function: ~<anonymous> /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/lodash/defaults.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1059:37
+      1    6.3%    LazyCompile: ~Duplex node:internal/streams/duplex:54:16
+      1  100.0%      LazyCompile: ~Socket node:net:291:16
+      1  100.0%        LazyCompile: ~WriteStream node:tty:84:21
+      1  100.0%          LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%            LazyCompile: ~getStderr node:internal/bootstrap/switches/is_main_thread:156:19
+      1    6.3%    LazyCompile: ~<anonymous> node:internal/fs/utils:358:35
+      1  100.0%      LazyCompile: ~<anonymous> node:internal/fs/utils:669:38
+      1  100.0%        LazyCompile: ~realpathSync node:fs:2439:22
+      1  100.0%          LazyCompile: ~toRealPath node:internal/modules/cjs/loader:394:20
+      1  100.0%            LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:495:28
+
+     13    1.0%  LazyCompile: *resolve node:path:1091:10
+      7   53.8%    LazyCompile: *readPackageScope node:internal/modules/cjs/loader:322:26
+      5   71.4%      Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      3   60.0%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      3  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2   40.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      2  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      2   28.6%      Function: ^trySelf node:internal/modules/cjs/loader:442:17
+      2  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      2  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2   15.4%    Function: ^readPackage node:internal/modules/cjs/loader:291:21
+      2  100.0%      Function: ^readPackageScope node:internal/modules/cjs/loader:322:26
+      1   50.0%        Function: ^trySelf node:internal/modules/cjs/loader:442:17
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      1   50.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1114:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      1    7.7%    LazyCompile: *Module._findPath node:internal/modules/cjs/loader:495:28
+      1  100.0%      Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      1  100.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:759:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    7.7%    Function: ^send /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/send/index.js:83:15
+      1  100.0%      Function: ^serveStatic /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/serve-static/index.js:72:31
+      1  100.0%        LazyCompile: *trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: *next /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:177:16
+      1  100.0%            Function: ^jsonParser /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/body-parser/lib/types/json.js:98:30
+      1    7.7%    Function: ^SendStream /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/send/index.js:96:21
+      1  100.0%      Function: ^send /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/send/index.js:83:15
+      1  100.0%        Function: ^serveStatic /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/serve-static/index.js:72:31
+      1  100.0%          Function: ^handle /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            Function: ^trim_prefix /Users/santiagosuarez/Desktop/projectCH/webPagePractitioner/node_modules/express/lib/router/index.js:293:23
+      1    7.7%    Function: ^Module._findPath node:internal/modules/cjs/loader:495:28
+      1  100.0%      Function: ^Module._resolveFilename node:internal/modules/cjs/loader:853:35
+      1  100.0%        Function: ^Module._load node:internal/modules/cjs/loader:759:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:101:31
+
